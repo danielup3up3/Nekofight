@@ -88,6 +88,7 @@ function parseInput(rplyToken, inputStr) {
 	//鴨霸獸指令開始於此
 	if (trigger.match(/沙希醬|沙希/) != null) return exports.funny.randomReply() ;
 	if (trigger.match(/C8763|星爆氣流斬/) != null) return exports.funny.C8763() ;
+	if (trigger.match(/野|野/) != null) return exports.funny.ya() ;
 	if (trigger.match(/運氣|運勢/) != null) return exports.funny.randomLuck(mainMsg) ; //占卜運氣		
 	
 
