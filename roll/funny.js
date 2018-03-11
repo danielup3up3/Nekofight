@@ -97,6 +97,7 @@ function ya(){
 	rply.text = '格';
 
 	return rply;
+	
 }
 
 function randomLuck(TEXT) {
@@ -397,4 +398,5 @@ module.exports = {
 	choice,
 	tarotCardReply,
 	C8763
+	ya
 };
