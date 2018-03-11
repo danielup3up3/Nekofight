@@ -29,7 +29,7 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 		///確定抽獎狀態
 		if(DrawPool == 0){
 			CharacterList0.length = 3;
-			CharacterList0 = ['艾恩','哈里','菲露米雅'];
+			CharacterList0 = ['疾走艾恩','獵人哈里','菲露米雅'];
 			
 			characterChance0 = 100;
 			characterChance1 = 0;
@@ -176,7 +176,12 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 		for(var i=0; i<times-characterST;i++){
 			temp = rollbase.Dice(100);
 
-			if(temp >characterChance2+characterChance3+characterChance4+characterChance5){
+			if(temp >characterChance1+characterChance2+characterChance3+characterChance4+characterChance5){
+				
+				CharacterResult[i] = CharacterList0[Math.floor((Math.random() * (CharacterList0.length)) + 0)];
+				GachaResult[i] = '\★:' +  CharacterResult[i]+ '\n';
+				
+			}else if(temp <=characterChance1+characterChance2+characterChance3+characterChance4+characterChance5 && temp >characterChance2+characterChance3+characterChance4+characterChance5){
 				
 				CharacterResult[i] = CharacterList1[Math.floor((Math.random() * (CharacterList1.length)) + 0)];
 				GachaResult[i] = '\☆:' +  CharacterResult[i]+ '\n';
