@@ -10,12 +10,14 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 		var times = 0;//抽獎次數
 		
 		//宣告角色清單
+		let CharacterList0 = [];//特殊角色清單
 		let CharacterList1 = [];//一星角色清單
 		let CharacterList2 = [];//二星角色清單
 		let CharacterList3 = [];//三星角色清單
 		let CharacterList4 = [];//四星角色清單
 		let CharacterList5 = [];//五星角色清單
  
+		var characterChance0 = 0;//特殊角色獲得率
 		var characterChance1 = 0;//一星角色獲得率
 		var characterChance2 = 0;//二星角色獲得率
 		var characterChance3 = 0;//三星角色獲得率
@@ -26,6 +28,45 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 		
 		///確定抽獎狀態
 		if(DrawPool == 0){
+			CharacterList0.length = 3;
+			CharacterList0 = ['艾恩','哈里','菲露米雅'];
+			
+			characterChance0 = 100;
+			characterChance1 = 0;
+			characterChance2 = 0;
+			characterChance3 = 0;
+			characterChance4 = 0;
+			characterChance5 = 0;
+
+			if(GachaTimes =='首抽'){
+				times = 1;
+	
+			}else if(GachaTimes == null){
+				
+				rply.text = '【首次限定！】起始降臨-和最初的夥伴相遇！ \
+					\n\
+					\n 出現稀有度一覽： \
+					\n ★(特殊稀有角色)：100%\
+					\n\
+					\n 出現角色一覽:\
+					\n 御三家系列 \
+					\n  疾走艾恩\
+					\n  獵人哈里\
+					\n  菲露米雅\
+					\n\
+					\n 提供降臨方式：\
+					\n 首抽 無需星輝石[一名玩家限定一次] \
+					\n\
+					\n 輸入 降臨 1 內容 即可確認降臨會登場的角色\
+					\n 想要降臨的話，請輸入 降臨 0 降臨方式(首抽) ';
+				
+				return rply;
+				
+			  }else{
+				rply.text = '本降臨無法使用' + GachaTimes +'降臨喔\n 如果想看本降臨詳細內容，請輸入 [招募 ' + DrawPool + ']';
+				return rply;	
+			  	}
+		}else if(DrawPool == 1){
 			CharacterList1.length = 3;
 			CharacterList1 = ['A','B','C'];
 			CharacterList2.length = 3;
@@ -74,11 +115,11 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 			  	}
 		}else if(DrawPool == null){
 			
-			rply.text = '【招募目錄】目前的招募一覽表 \
+			rply.text = '【降臨目錄】目前的降臨一覽表 \
 				\n\
-				\n  0 【新手招募(首抽)】 \
-				\n  1 【限定招募】過往回憶的夥伴們(前篇)(NEW) \
-				\n  2 【通常奇蹟石招募】 \
+				\n  0 【起始降臨(首抽)】 \
+				\n  1 【限定降臨】限時卡池「貝爾洛斯」(NEW) \
+				\n  2 【通常降臨】常駐星輝石降臨 \
 				\n\
 				\n 如果想看詳細招募內容，請輸入 [招募 招募編號]';
 				return rply;
@@ -87,11 +128,11 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 			
 			rply.text = '找不到招募編號['+ DrawPool+ ']的招募喔\
 				\n\
-				\n【招募目錄】目前的招募一覽表 \
+				\n【降臨目錄】目前的降臨一覽表 \
 				\n\
-				\n  0 【新手招募(首抽)】 \
-				\n  1 【限定招募】過往回憶的夥伴們(前篇)(NEW) \
-				\n  2 【通常奇蹟石招募】 \
+				\n  0 【起始降臨(首抽)】 \
+				\n  1 【限定降臨】限時卡池「貝爾洛斯」(NEW) \
+				\n  2 【通常降臨】常駐星輝石降臨 \
 				\n\
 				\n 如果想看詳細招募內容，請輸入 [招募 招募編號]';
 				return rply;
