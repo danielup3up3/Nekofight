@@ -98,7 +98,7 @@ function parseInput(rplyToken, inputStr) {
 	if (trigger.match(/^降臨$/) != null) return exports.gachaC.main(mainMsg[1],mainMsg[2]);	//角色降臨指令
 	if (trigger.match(/^共鳴$/) != null) return exports.gachaB.main(mainMsg[1],mainMsg[2]);	//魔導書共鳴指令
 	//每日登入轉輪
-	if (trigger.match(/^每日登入$/) != null) return exports.funny.loginawardS() ;
+	if (trigger.match(/^每日登入$/) != null) return exports.GameInformation.loginawardS(mainMsg[1]) ;
 
 	/*tarot 指令
 	if (trigger.match(/猜拳/) != null) {
