@@ -141,6 +141,28 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 		
 		///
 		
+		///確認內容
+		if(GachaTimes =='內容'){
+			
+			let tempList0 = []
+			
+			for(var i = 0;i<CharacterList0.length;i++){
+
+				for(var j = i+1;j<CharacterList0.length;j++){
+					if(CharacterResult[i]!= null && CharacterResult[i] == CharacterResult[j] && CharacterResult[j] != null){
+						CharacterResult[j] = null;
+						CharacterR++ ;
+					}
+				   }
+				if(CharacterResult[i]!= null) CharacterResult[i] = CharacterResult[i] + '*' + CharacterR;
+
+			}///重複角色判斷
+		
+		
+		
+		}
+		
+		
 		///抽獎
 		
 		var temp = 0;
