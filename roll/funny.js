@@ -397,6 +397,6 @@ module.exports = {
 	tarotRevReply,
 	choice,
 	tarotCardReply,
-	C8763
+	C8763,
 	ya
 };
