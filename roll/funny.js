@@ -72,17 +72,6 @@ rply.text = rplyArr[Math.floor((Math.random() * (rplyArr.length)) + 0)];
 return rply;
 }
 
-//每日登入轉輪
-function loginawardS() {
-let rplyArr = ['\
-恭喜獲得10G', '\
-恭喜獲得50G', '\
-恭喜獲得星輝石*1', '\
-雖然沒得到什麼，不過今天第一場輸掉的段位賽不會掉分喔'];
-rply.text = rplyArr[Math.floor((Math.random() * (rplyArr.length)) + 0)];
-return rply;
-}
-
 
 
 function C8763(){
