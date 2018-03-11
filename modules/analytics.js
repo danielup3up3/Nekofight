@@ -93,6 +93,10 @@ function parseInput(rplyToken, inputStr) {
 	
 	//遊戲公告指令
 	if (trigger.match(/^公告$/) != null) return exports.GameInformation.main(mainMsg[1]) ;
+	
+	//抽角 魔導書
+	if (trigger.match(/^降臨$/) != null) return exports.gachaC.main(mainMsg[1],mainMsg[2]);	//角色降臨指令
+	if (trigger.match(/^共鳴$/) != null) return exports.gachaB.main(mainMsg[1],mainMsg[2]);	//魔導書共鳴指令
 
 	
 	/*tarot 指令
