@@ -73,7 +73,7 @@ return rply;
 }
 
 //每日登入轉輪
-function loginawards() {
+function loginawardS() {
 let rplyArr = ['\
 恭喜獲得10G', '\
 恭喜獲得50G', '\
