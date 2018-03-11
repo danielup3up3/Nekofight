@@ -89,8 +89,10 @@ function parseInput(rplyToken, inputStr) {
 	if (trigger.match(/沙希醬|沙希/) != null) return exports.funny.randomReply() ;
 	if (trigger.match(/C8763|星爆氣流斬/) != null) return exports.funny.C8763() ;
 	if (trigger.match(/^野$/) != null) return exports.funny.ya() ;
-	if (trigger.match(/運氣|運勢/) != null) return exports.funny.randomLuck(mainMsg) ; //占卜運氣		
+	if (trigger.match(/運氣|運勢/) != null) return exports.funny.randomLuck(mainMsg) ; //占卜運氣	
 	
+	//遊戲公告指令
+	if (trigger.match(/^公告$/) != null) return exports.GameInformation.main(mainMsg[1]) ;
 
 	
 	/*tarot 指令
