@@ -5,8 +5,6 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 	function main(BunusType,LoginDays) {
 		
 		///基本變數
-    
-		let result
 		let BonusListN = [];//普通獎勵
 		let BonusListR = [];//高級獎勵
 		let BonusListP = [];//完美獎勵
@@ -71,13 +69,13 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 			
 			//設定獎勵內容
 			BonusListN.length = 3;
-			BonusListN = ['野','格','斷'];
+			BonusListN = ['10G','50G','87G'];
 			
 			BonusListR.length = 3;
 			BonusListR = ['100G','1000G','10000G'];
 			
 			BonusListP.length = 2;
-			BonusListP = ['星爆氣流斬','C8763'];
+			BonusListP = ['擊風劍士-艾恩','奧術降神-亞洛'];
 			
 			//
 			
@@ -108,21 +106,17 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 		 
 		//分析結果
                 var temp = rollbase.Dice(100); 
-		
 		if(temp > BonusChanceR + BonusChanceP){
-			
+			rply.text = '登入獎勵結果:\
+				\n 恭喜獲得普通獎勵' + BonusListN[Math.floor((Math.random() * (BonusListN.length)) + 0)] + '！';
+		}else if(temp <=BonusChanceR + BonusChanceP && temp >BonusChanceR ){
+			rply.text = '登入獎勵結果:\
+				\n 恭喜獲得高級獎勵' + BonusListR[Math.floor((Math.random() * (BonusListR.length)) + 0)] + '！';
+		}else if(temp <= BonusChanceP){
+			rply.text = '登入獎勵結果:\
+				\n 恭喜獲得完美獎勵' + BonusListP[Math.floor((Math.random() * (BonusListP.length)) + 0)] + '！';
 		}
 		
-    
-    
-    let GResult ='登入獎勵結果:\n'
-		}
-		
-		GResult = GResult + '\n--------------------\n總計獲得獎勵:\n';
-		
-		}
-		
-		rply.text = GResult;
 		
 		return rply;
 		
