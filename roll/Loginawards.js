@@ -57,12 +57,8 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
                 var temp = 0;
 		GachaResult.length = 1;
 		
-		for(var i = 0;){
-			
-			GachaResult[i] = '\n';
-			
-		}
-                for(var i=0; ){
+		GachaResult[i] = '\n';
+
 			temp = rollbase.Dice(100);
 
 			if(temp >awardsChance2+awardsChance3){
@@ -82,7 +78,7 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 				GachaResult[i] = '\獎勵:' +  awarsdsResult[i]+ '\n';
 				
 			}
-		}//通常處理	
+		//通常處理	
     
     
     
