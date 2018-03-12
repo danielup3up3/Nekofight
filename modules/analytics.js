@@ -100,7 +100,7 @@ function parseInput(rplyToken, inputStr) {
 	if (trigger.match(/^共鳴$/) != null) return exports.gachaB.main(mainMsg[1],mainMsg[2]);	//魔導書共鳴指令
 	
 	//登入
-	if (trigger.match(/^登入$/) != null) return exports.Loginawards.main(mainMsg[1]);	//登入轉輪
+	if (trigger.match(/^登入$/) != null) return exports.Loginawards.main(mainMsg[1],mainMsg[2]);	//登入轉輪
 
 
 	/*tarot 指令
