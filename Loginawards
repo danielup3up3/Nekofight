@@ -12,49 +12,49 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 		let awardsList2 = [];//100G
 		let awardsList3 = [];//星輝石1顆
   
-    var awardsChance1 = 0;//50G獲得率
+                var awardsChance1 = 0;//50G獲得率
 		var awardsChance2 = 0;//100G獲得率
 		var awardsChance3 = 0;//星輝石1顆獲得率
     
     ///確定連登狀態
 		if(DrawPool == 1){
-			awardsList1.length = 3;
+			awardsList1.length = 1;
 			awardsList1 = ['50G'];
-			awardsList2.length = 3;
+			awardsList2.length = 1;
 			awardsList2 = ['100G'];
-      awardsList3.length = 3;
+                        awardsList3.length = 1;
 			awardsList3 = ['星輝石1顆'];
       
-      awardsChance1 = 60;
+                        awardsChance1 = 60;
 			awardsChance2 = 30;
 			awardsChance3 = 10;
       
-      if(DrawPool == 2){
-			awardsList1.length = 3;
+                if(DrawPool == 2){
+			awardsList1.length = 1;
 			awardsList1 = ['50G'];
-			awardsList2.length = 3;
+			awardsList2.length = 1;
 			awardsList2 = ['100G'];
-      awardsList3.length = 3;
+                        awardsList3.length = 1;
 			awardsList3 = ['星輝石1顆'];
       
-      awardsChance1 = 40;
+                        awardsChance1 = 40;
 			awardsChance2 = 40;
 			awardsChance3 = 20;
       
-      if(DrawPool == 3){
-			awardsList1.length = 3;
+                        if(DrawPool == 3){
+			awardsList1.length = 1;
 			awardsList1 = ['50G'];
-			awardsList2.length = 3;
+			awardsList2.length = 1;
 			awardsList2 = ['100G'];
-      awardsList3.length = 3;
+                        awardsList3.length = 1;
 			awardsList3 = ['星輝石1顆'];
       
-      awardsChance1 = 20;
+                        awardsChance1 = 20;
 			awardsChance2 = 40;
 			awardsChance3 = 40;
 }
 
-     var temp = 0;
+                var temp = 0;
 		GachaResult.length = 1;
 		
 		for(var i = 0;){
@@ -62,7 +62,7 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 			GachaResult[i] = '\n';
 			
 		}
-for(var i=0; ){
+                for(var i=0; ){
 			temp = rollbase.Dice(100);
 
 			if(temp >awardsChance2+awardsChance3){
