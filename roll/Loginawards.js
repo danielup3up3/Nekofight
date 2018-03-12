@@ -140,13 +140,13 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
                 var temp = rollbase.Dice(100); 
 		if(temp > BonusChanceR + BonusChanceP){
 			rply.text = '登入獎勵結果:\
-				\n 恭喜獲得普通獎勵' + BonusListN[Math.floor((Math.random() * (BonusListN.length)) + 0)] + '！';
+				\n 恭喜獲得普通獎勵 ' + BonusListN[Math.floor((Math.random() * (BonusListN.length)) + 0)] + ' ！';
 		}else if(temp <=BonusChanceR + BonusChanceP && temp >BonusChanceR ){
 			rply.text = '登入獎勵結果:\
-				\n 恭喜獲得高級獎勵' + BonusListR[Math.floor((Math.random() * (BonusListR.length)) + 0)] + '！';
+				\n 恭喜獲得高級獎勵 ' + BonusListR[Math.floor((Math.random() * (BonusListR.length)) + 0)] + ' ！';
 		}else if(temp <= BonusChanceP){
 			rply.text = '登入獎勵結果:\
-				\n 恭喜獲得完美獎勵' + BonusListP[Math.floor((Math.random() * (BonusListP.length)) + 0)] + '！';
+				\n 恭喜獲得完美獎勵 ' + BonusListP[Math.floor((Math.random() * (BonusListP.length)) + 0)] + ' ！';
 		}
 		
 		
