@@ -29,7 +29,7 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 			awardsChance2 = 30;
 			awardsChance3 = 10;
       
-                if(DrawPool == 2){
+                 }else if(DrawPool == 2){
 			awardsList1.length = 1;
 			awardsList1 = ['50G'];
 			awardsList2.length = 1;
@@ -41,7 +41,7 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 			awardsChance2 = 40;
 			awardsChance3 = 20;
       
-                        if(DrawPool == 3){
+                 }else if(DrawPool == 3){
 			awardsList1.length = 1;
 			awardsList1 = ['50G'];
 			awardsList2.length = 1;
@@ -52,7 +52,7 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
                         awardsChance1 = 20;
 			awardsChance2 = 40;
 			awardsChance3 = 40;
-}
+                 }
 
                 var temp = 0;
 		GachaResult.length = 1;
