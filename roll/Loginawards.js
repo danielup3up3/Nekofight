@@ -72,7 +72,7 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 				GachaResult[i] = '\獎勵:' +  awarsdsResult[i]+ '\n';
 				
 		
-			}else if(temp <= awardsChance3{
+			}else if(temp <= awardsChance3){
 				
 				awardsResult[i] = awarsdsList3[Math.floor((Math.random() * (awarsdsList3.length)) + 0)];
 				GachaResult[i] = '\獎勵:' +  awarsdsResult[i]+ '\n';
