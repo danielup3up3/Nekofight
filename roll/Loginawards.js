@@ -90,9 +90,41 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 				
 			}
 			
+		}else if(BunusType == null){
+				//設定說明文內容
+				rply.text = '【登入目錄】目前遊戲中的每日一覽表 \
+				\n\
+				\n 在這裡可以確認目前的每日登入有哪些喔\
+				\n  0 【登入獎勵】 通常每日登入\
+				\n\
+				\n 如果想看詳細登入內容，請輸入 登入 登入編號 喔！';
+				//
+				
+				return rply;//中斷+回傳值用
+		}else{
+				//設定說明文內容
+				rply.text ='找不到編號['+ BunusType + ']的每日登入喔\
+				\n\
+				\n【登入目錄】目前遊戲中的每日一覽表 \
+				\n\
+				\n 在這裡可以確認目前的每日登入有哪些喔\
+				\n  0 【登入獎勵】 通常每日登入\
+				\n\
+				\n 如果想看詳細登入內容，請輸入 登入 登入編號 喔！';
+				//
+				
+				return rply;//中斷+回傳值用
 		}
-		 
+
 		
+
+		 
+		if(isNaN(LoginDays) == true){
+			//設定說明文內容
+				rply.text = '請用半形阿拉伯數字表示天數喔';
+				//
+				return rply;//中斷+回傳值用
+		}
 		if(LoginDays >= BonusRateMaxDay) LoginDays = BonusRateMaxDay; //判斷天數超過最大天數時，變成最大天數
 
 		//機率成長
