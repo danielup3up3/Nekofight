@@ -98,6 +98,9 @@ function parseInput(rplyToken, inputStr) {
 	//抽角 魔導書
 	if (trigger.match(/^降臨$/) != null) return exports.gachaC.main(mainMsg[1],mainMsg[2]);	//角色降臨指令
 	if (trigger.match(/^共鳴$/) != null) return exports.gachaB.main(mainMsg[1],mainMsg[2]);	//魔導書共鳴指令
+	
+	//登入
+	if (trigger.match(/^登入$/) != null) return exports.Loginawards.main(mainMsg[1]);	//登入轉輪
 
 
 	/*tarot 指令
