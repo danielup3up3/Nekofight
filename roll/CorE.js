@@ -9,12 +9,12 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 		let BonusGmoney10 = [];//50>G>=10
 		let BonusGmoney50 = [];//150>G>=50
 		let BonusGmoney150 = [];//300>G>=150
-    let BonusStarStone0 = [];//5>星石>=0
-    let BonusStarStone5 = [];//10>星石>=5
-    let BonusStarStone10 = [];//星石>=10
-    let BonusDecore10 = [];//100>=核心零件>=10
-    let BonusDecore100 = [];//250>=核心零件>100
-    let BonusDecore250 = [];//核心零件>250
+                let BonusStarStone0 = [];//5>星石>=0
+                let BonusStarStone5 = [];//10>星石>=5
+                let BonusStarStone10 = [];//星石>=10
+                let BonusDecore10 = [];//100>=核心零件>=10
+                let BonusDecore100 = [];//250>=核心零件>100
+                let BonusDecore250 = [];//核心零件>250
     
     
     //判定
@@ -94,3 +94,10 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 
 }
 }
+
+
+////////////////
+
+module.exports = {
+	main
+};
