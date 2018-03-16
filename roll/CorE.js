@@ -6,6 +6,7 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
   
   ///基本變數(不要動)
 		///基本變數
+
 		let BonusGmoney = [];
                 let BonusStarStone = [];
                 let BonusDecore = [];
