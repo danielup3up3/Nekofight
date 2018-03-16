@@ -103,7 +103,7 @@ function parseInput(rplyToken, inputStr) {
 	if (trigger.match(/^登入$/) != null) return exports.Loginawards.main(mainMsg[1],mainMsg[2]);	//登入轉輪
 	
 	//核心
-	if (trigger.match(/^登入$/) != null) return exports.CorE.main(mainMsg[1],mainMsg[2],mainMsg[3]);	
+	if (trigger.match(/^核心建造$/) != null) return exports.CorE.main(mainMsg[1],mainMsg[2],mainMsg[3]);	
 
 
 	/*tarot 指令
