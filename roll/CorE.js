@@ -16,17 +16,17 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
     if(Gmoney < 50 && Gmoney >= 10){
     
     Gmoneylist.length = 6;
-    Gmoneylist = ['☆A核心','☆B核心','☆☆H核心','☆☆☆☆S核心','☆☆K核心','☆☆☆M核心'];
+    Gmoneylist = ['☆風之靈衣','☆載夜小舟','☆☆光輝之劍','☆☆☆☆不死的邪穢','☆☆符文石','☆☆☆自我修補系統'];
     
     if(StarStone < 5 && StarStone >= 0){
     
     Stonelist.length = 7;
-    Stonelist = ['☆A核心','☆☆C核心','☆☆☆☆J核心','☆B核心','☆F核心','☆☆E核心','☆☆☆L核心'];
+    Stonelist = ['☆風之靈衣','☆☆魔女的掃帚','☆☆☆☆破魔劍','☆載夜小舟','☆魔導學徒帽','☆☆☆海之加護','☆☆☆☆不死的邪穢'];
     
     if(Decore <= 100 && Decore >= 10){
     
     Decorelist.length = 6;
-    Decorelist = ['☆G核心','☆I核心','☆☆H核心','☆☆☆☆☆N核心','☆☆☆M核心','☆☆☆L核心'];
+    Decorelist = ['☆魔法螺旋','☆邪龍槍','☆☆光輝之劍','☆☆☆☆☆神異世界','☆☆☆自我修補系統','☆☆☆大地精靈術'];
     
     }
     }
@@ -35,17 +35,17 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
     }else if(Gmoney < 150 && Gmoney >= 50){
     
     Gmoneylist.length = 4;
-    Gmoneylist = ['☆☆C核心','☆☆☆D核心','☆G核心','☆☆☆☆☆N核心'];
+    Gmoneylist = ['☆☆☆海之加護','☆☆☆自我修補系統','☆魔法螺旋','☆☆☆☆☆神異世界'];
     
     if(StarStone < 10 && StarStone >= 5){
     
     Stonelist.length = 4;
-    Stonelist = ['☆☆☆D核心','☆☆H核心','☆☆☆M核心','☆☆K核心'];
+    Stonelist = ['☆☆☆大地精靈術','☆☆光輝之劍','☆☆☆☆不死的邪穢','☆☆符文石'];
     
     if(Decore <= 250 && Decore > 100){
     
     Decorelist.length = 5;
-    Decorelist = ['☆A核心','☆☆C核心','☆☆☆D核心','☆☆☆E核心','☆F核心'];
+    Decorelist = ['☆風之靈衣','☆☆魔女的掃帚','☆☆☆自我修補系統','☆☆☆海之加護','☆魔導學徒帽'];
     
     }
     }
@@ -54,17 +54,17 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
      }else if(Gmoney < 300 && Gmoney >= 150){
     
     Gmoneylist.length = 5;
-    Gmoneylist = ['☆☆E核心','☆F核心','☆I核心','☆☆☆☆J核心','☆☆☆L核心'];
+    Gmoneylist = ['☆☆魔女的掃帚','☆魔導學徒帽','☆邪龍槍','☆☆☆☆破魔劍','☆☆☆大地精靈術'];
     
      if(StarStone >= 10){
     
     Stonelist.length = 3;
-    Stonelist = ['☆G核心','☆I核心','☆☆☆☆☆N核心'];
+    Stonelist = ['☆魔法螺旋','☆邪龍槍','☆☆☆☆不死的邪穢'];
     
      if(Decore > 250){
     
     Decorelist.length = 3;
-    Decorelist = ['☆B核心','☆☆K核心','☆☆☆☆J核心'];
+    Decorelist = ['☆載夜小舟','☆☆符文石','☆☆☆☆破魔劍'];
     
     }
     }
