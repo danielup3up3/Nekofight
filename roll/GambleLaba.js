@@ -72,8 +72,8 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 				
 			}else{
 				//設定說明文內容
-				rply.text ='無法使用['+ StarStone + ']顆星輝石進行下注喔\
-				\n 請使用1或5顆(暫未開放)進行下注';
+				rply.text ='無法使用'+ StarStone + '顆星輝石進行下注喔!\
+				\n 請使用1顆或5顆(暫未開放)星輝石進行下注';
 				//
 				
 				return rply;//中斷+回傳值用
