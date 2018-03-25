@@ -61,11 +61,21 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 			else if(StarStone == null){
 				
 				//設定說明文內容
-				rply.text = '【賭博之城】 星輝拉霸機\
-					\n可以下注的星輝石金額有\
-					\n 1顆(賠率*2)\
-					\n 5顆(賠率*5)暫未開放\
-					\n 想試試手氣或輕鬆賺大錢的話，請千萬不要放過這個機會喔';
+				rply.text =  '【賭博之城】 星輝拉霸機\
+					\n 可以下注的星輝石金額有\
+					\n 1顆(賠率*1)跟5顆(賠率*5)暫未開放\
+					\n 規則:\
+                                        \n 1.需3個圖案相同才能拿到該圖案的獎金\
+                                        \n 2.金色圖案跟該類型的基本圖案可以視為一樣\
+                                        \n 3.當三個圖案類別一樣成功串線的時候\
+                                        \n 每多一個金色圖案就+100G追加獎勵\
+                                        \n 獎金:\
+                                        \n 蘋果系列:200G\
+                                        \n 貓咪圖案系列:200核心零件\
+                                        \n 星星系列:3顆星輝石\
+                                        \n 鑽石系列:5顆星輝石\
+                                        \n 數字7系列:10顆星輝石\
+                                        \n 如果沒成功串成線就什麼都沒有囉~';
 				//
 				
 				return rply;//中斷+回傳值用
@@ -96,27 +106,27 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 			if(temp <=APPLEChance+catChance+STARChance+diamondChance+NANAChance && temp >catChance+STARChance+diamondChance+NANAChance){
 				
 				CharacterResult[i] = RulistAPPLE[Math.floor((Math.random() * (RulistAPPLE.length)) + 0)];
-				GachaResult[i] = '\☆:' +  CharacterResult[i]+ '\n';
+				GachaResult[i] = '\蘋果系列:' +  CharacterResult[i]+ '\n';
 				
 			}else if(temp <=catChance+STARChance+diamondChance+NANAChance && temp > STARChance+diamondChance+NANAChance){
 				
 				CharacterResult[i] = Rulistcat[Math.floor((Math.random() * (Rulistcat.length)) + 0)];
-				GachaResult[i] = '\☆☆:' +  CharacterResult[i]+ '\n';
+				GachaResult[i] = '\貓咪圖案系列:' +  CharacterResult[i]+ '\n';
 				
 			}else if(temp <= STARChance+diamondChance+NANAChance && temp > diamondChance+NANAChance){
 				
 				CharacterResult[i] = RulistSTAR[Math.floor((Math.random() * (RulistSTAR.length)) + 0)];
-				GachaResult[i] = '\☆☆☆:' +  CharacterResult[i]+ '\n';
+				GachaResult[i] = '\星星系列:' +  CharacterResult[i]+ '\n';
 				
 			}else if(temp <= diamondChance+NANAChance && temp >NANAChance){
 				
 				CharacterResult[i] = Rulistdiamond[Math.floor((Math.random() * (Rulistdiamond.length)) + 0)];
-				GachaResult[i] = '\☆☆☆☆:' +  CharacterResult[i]+ '\n';
+				GachaResult[i] = '\鑽石系列:' +  CharacterResult[i]+ '\n';
 				
 			}else if(temp <= NANAChance){
 				
 				CharacterResult[i] = RulistNANA[Math.floor((Math.random() * (RulistNANA.length)) + 0)];
-				GachaResult[i] = '\☆☆☆☆☆:' +  CharacterResult[i]+ '\n';
+				GachaResult[i] = '\數字7系列:' +  CharacterResult[i]+ '\n';
 				
 			}
 		}//通常腳色處理	
