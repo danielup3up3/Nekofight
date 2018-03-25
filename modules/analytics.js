@@ -105,6 +105,8 @@ function parseInput(rplyToken, inputStr) {
 	//核心
 	if (trigger.match(/^核心建造$/) != null) return exports.CorE.main(mainMsg[1],mainMsg[2],mainMsg[3]);	
 
+	//賭博拉霸
+	if (trigger.match(/^星輝拉霸機$/) != null) return exports.GambleLaba.main(mainMsg[1]);
 
 	/*tarot 指令
 	if (trigger.match(/猜拳/) != null) {
