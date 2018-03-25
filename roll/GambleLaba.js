@@ -10,13 +10,13 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 		var times = 0;//次數
 
 	//基本變數
-		let RulistSTAR = [];  //☆
+		let RulistSTAR = [];  //☆ 星星
                 let RulistAPPLE = [];  //蘋果
                 let RulistNANA = [];  //數字7
                 let Rulistdiamond = [];  //鑽石
                 let Rulistcat = [];  //貓咪圖案
     
-    var STARChance = 0;//☆獲得率
+    var STARChance = 0;//星星獲得率
     var APPLEChance = 0;//蘋果獲得率
     var NANAChance = 0;//數字7獲得率
     var diamondChance = 0;//鑽石獲得率
@@ -40,7 +40,7 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 			
 			//設定獎勵內容
 			RulistSTAR.length = 2;
-			RulistSTAR = ['☆','黃金之星'];
+			RulistSTAR = ['星星','黃金之星'];
 			
 			RulistAPPLE.length = 2;
 			RulistAPPLE = ['蘋果','金蘋果'];
