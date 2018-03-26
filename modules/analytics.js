@@ -111,6 +111,15 @@ function parseInput(rplyToken, inputStr) {
 	//賭博拉霸
 	if (trigger.match(/^撲克抽卡$/) != null) return exports.pokerone.main(mainMsg[1]);
 	
+	
+	
+	
+	
+	
+	//////////////////////////怪物實戰設定區////////////////////////////////
+	
+	if (trigger.match(/^End換哈里$/) != null) return exports.MonsterHariTest.main(mainMsg[1],mainMsg[2]);
+	
 	/*tarot 指令
 	if (trigger.match(/猜拳/) != null) {
 		return RockPaperScissors(inputStr, mainMsg[1]);
