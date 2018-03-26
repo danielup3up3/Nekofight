@@ -2,9 +2,9 @@ var rollbase = require('./rollbase.js');
 var rply ={type : 'text'}; //type是必需的,但可以更改
 
 ////////////////抽卡數
-	function main(card) {
+	function main(pokercard) {
   
-  //基本變數
+               //基本變數
 		let GachaResult = [];//結果
 		let cardResult = [];
 		var times = 0;//次數
@@ -25,11 +25,11 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
     
     //確定遊戲階段
 		
-		if(card =='單抽'){
+		if(pokercard == '單抽'){
 			//設定基本變數
       
 			//出現卡片
-      times = 1;
+                        times = 1;
       
 			diamondChance = 24;
 			heartChance = 24;
@@ -56,10 +56,10 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
       
       
       
-     } else if(card =='五張'){
+     } else if(pokercard == '五張'){
 				times = 5;
         
-        diamondChance = 24;
+                        diamondChance = 24;
 			heartChance = 24;
 			spadeChance = 24;
 			clubsChance = 24;
@@ -76,10 +76,10 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 			Rulistspade.length = 13;
 			Rulistspade = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
       
-      Rulistclubs.length = 13;
+                        Rulistclubs.length = 13;
 			Rulistclubs = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
       
-      RulistJOKER.length = 1;
+                        RulistJOKER.length = 1;
 			RulistJOKER = ['JOKER'];
       
       }
@@ -87,7 +87,7 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
      
      
       //設定說明文
-			else if(card == null){
+			else if(pokercard == null){
 				
 				//設定說明文內容
 				rply.text =  '【賭博之城】 皇帝撲克\
@@ -110,24 +110,17 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 			
       
       }else{//設定說明文內容
-				rply.text ='無法支援'+ card + '撲克的比試喔!\
-				\n 請選擇單張或五張(暫未開放)星輝石進行下注';
+				rply.text ='無法支援'+ pokercard + '撲克的比試喔!\
+				\n 請選擇單張或五張';
 				//
 				
 				return rply;//中斷+回傳值用
 		
-				//設定說明文內容
-				rply.text ='無法使用'+ StarStone + '顆星輝石進行下注喔!\
-				\n 請使用1顆或5顆(暫未開放)星輝石進行下注';
-				//
-				
-				return rply;//中斷+回傳值用
-		}
 			
       
      
      
-     
+      }
      var temp = 0;
 		GachaResult.length = times;
 		
