@@ -2,7 +2,7 @@ var rollbase = require('./rollbase.js');
 var rply ={type : 'text'}; //type是必需的,但可以更改
 
 //////////////// 
-	function main(PlayerHP,monsterHP) {
+	function main(monsterHP) {
   
     let SkillOne = [];//技能1
 		let SkillTwo = [];//技能2
