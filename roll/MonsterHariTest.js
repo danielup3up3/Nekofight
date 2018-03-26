@@ -108,8 +108,8 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 		if(temp > TwoChance + SpecialChance){
     
 			SkillResult[i] = SkillOne[Math.floor((Math.random() * (SkillOne.length)) + 0)];
-				AttackResult[i] = '\哈里使用了' +  SkillResult[i]+ ' 造成了3點傷害' +'\
-                 \n END';
+				AttackResult[i] = '\哈里使用了' +  SkillResult[i]+ ' 造成了3點傷害跟暗箭-3' +'\
+                 \n 總共-6 END';
       
 		}else if(temp <=TwoChance + SpecialChance && temp >SpecialChance ){
     
@@ -120,8 +120,8 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 		}else if(temp <= SpecialChance){
 			
 			SkillResult[i] = SpecialSkill[Math.floor((Math.random() * (SpecialSkill.length)) + 0)];
-				AttackResult[i] = '\哈里使用了' +  SkillResult[i]+ ' 造成了14點傷害' + '\
-                  \n END';
+				AttackResult[i] = '\哈里使用了' +  SkillResult[i]+ ' 造成了14點傷害跟暗箭-3' + '\
+                  \n 總共-17 END';
 		}
 		
 		
