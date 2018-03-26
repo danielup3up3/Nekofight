@@ -164,7 +164,8 @@ function RockPaperScissors(HandToCal, text) {
 ////////////////////////////////////////
  
 function Hari(){
-	rply.text = '獵人哈里';
+	rply.text = '獵人哈里\
+				\n HP 36/36  危險度: C';
 	return rply;
 }
 
