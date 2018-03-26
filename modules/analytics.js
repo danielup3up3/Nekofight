@@ -118,7 +118,7 @@ function parseInput(rplyToken, inputStr) {
 	
 	//////////////////////////怪物實戰設定區////////////////////////////////
 	
-	if (trigger.match(/^End換哈里$/) != null) return exports.MonsterHariTest.main(mainMsg[1],mainMsg[2]);
+	if (trigger.match(/^End換哈里$/) != null) return exports.MonsterHariTest.main(mainMsg[1]);
 	
 	/*tarot 指令
 	if (trigger.match(/猜拳/) != null) {
