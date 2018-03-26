@@ -115,10 +115,18 @@ function parseInput(rplyToken, inputStr) {
 	
 	
 	
+	//////////////////////////怪物資料彙整區////////////////////////////////
+	
+	//哈里
+	if (trigger.match(/^哈里挑戰1$/) != null) return exports.funny.Hari() ;
+	
+	
+	
 	
 	//////////////////////////怪物實戰設定區////////////////////////////////
 	
-	if (trigger.match(/^換哈里$/) != null) return exports.MonsterHariTest.main(mainMsg[1]);
+	//哈里
+	if (trigger.match(/^回合結束換哈里$/) != null) return exports.MonsterHariTest.main(mainMsg[1]);
 	
 	/*tarot 指令
 	if (trigger.match(/猜拳/) != null) {
