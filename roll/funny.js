@@ -160,6 +160,25 @@ function RockPaperScissors(HandToCal, text) {
 
 
 ////////////////////////////////////////
+//////////////// 怪物資訊
+////////////////////////////////////////
+ 
+function Hari(){
+	rply.text = '獵人哈里';
+	return rply;
+}
+
+
+
+
+
+
+
+
+
+
+
+////////////////////////////////////////
 //////////////// Tarot塔羅牌
 ////////////////////////////////////////
 function MultiDrawTarot(CardToCal, text, type) {
@@ -397,5 +416,6 @@ module.exports = {
 	tarotCardReply,
 	C8763,
 	ya,
+	Hari,
 	zA
 };
