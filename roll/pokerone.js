@@ -87,7 +87,7 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
      
      
       //設定說明文
-			else if(cord == null){
+			else if(card == null){
 				
 				//設定說明文內容
 				rply.text =  '【賭博之城】 皇帝撲克\
