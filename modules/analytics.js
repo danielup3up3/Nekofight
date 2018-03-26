@@ -108,6 +108,9 @@ function parseInput(rplyToken, inputStr) {
 	//賭博拉霸
 	if (trigger.match(/^星輝拉霸機$/) != null) return exports.GambleLaba.main(mainMsg[1]);
 
+	//賭博拉霸
+	if (trigger.match(/^撲克抽卡$/) != null) return exports.poker.main(mainMsg[1]);
+	
 	/*tarot 指令
 	if (trigger.match(/猜拳/) != null) {
 		return RockPaperScissors(inputStr, mainMsg[1]);
