@@ -3,6 +3,11 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 
 //////////////// 
 	function main(monsterHP) {
+		
+		let AttackResult = [];//結果
+		let SkillResult = [];
+		var times = 0;//Boss回合行動次數
+
   
     let SkillOne = [];//技能1
 		let SkillTwo = [];//技能2
@@ -16,7 +21,8 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
     //哈里HP 36/36
     if(monsterHP >= 30){
 			//綠血區域時
-			
+			times = 1
+	    
 			OneChance = 70;
 			TwoChance = 30;
 			SpecialChance = 0;
@@ -36,7 +42,8 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
       
       }else if(monsterHP < 30 && monsterHP >= 12){
 			//黃血區域
-		
+		times = 1
+	      
 			OneChance = 40;
 			TwoChance = 50;
 			SpecialChance = 10;
@@ -56,7 +63,8 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
     
     }else if(monsterHP < 12){
 			//紅血區域
-			
+			times = 2
+	    
 			OneChance = 0;
 			TwoChance = 30;
 			SpecialChance = 70;
@@ -80,25 +88,56 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 				
 				return rply;//中斷+回傳值用
 		}
+		
+		 var temp = 0;
+		AttackResult.length = times;
+		
+		for(var i = 0; i< times;i++){
+			
+			AttackResult[i] = '\n';
+			
+		}
     
     
     
     //分析行動
-                var temp = rollbase.Dice(100); 
+               
+    for(var i=0; i< times;i++){
+		temp = rollbase.Dice(100);
+
 		if(temp > TwoChance + SpecialChance){
     
-			rply.text = '哈里瞄準了你之後使用了 ' + SkillOne[Math.floor((Math.random() * (SkillOne.length)) + 0)] + ' ！';
+			SkillResult[i] = SkillOne[Math.floor((Math.random() * (SkillOne.length)) + 0)];
+				AttackResult[i] = '\哈里使用了' +  SkillResult[i]+ '\n';
       
 		}else if(temp <=TwoChance + SpecialChance && temp >SpecialChance ){
     
-			rply.text = '哈里已經在你即將踏上的地方設置了 ' + SkillTwo[Math.floor((Math.random() * (SkillTwo.length)) + 0)] + ' ！';
+			SkillResult[i] = SkillTwo[Math.floor((Math.random() * (SkillTwo.length)) + 0)];
+				AttackResult[i] = '\哈里使用了' +  SkillResult[i]+ '\n';
         
 		}else if(temp <= SpecialChance){
-			rply.text = '哈里使出了他的奧術終結技 ' + SpecialSkill[Math.floor((Math.random() * (SpecialSkill.length)) + 0)] + ' ！';
+			
+			SkillResult[i] = SpecialSkill[Math.floor((Math.random() * (SpecialSkill.length)) + 0)];
+				AttackResult[i] = '\哈里使用了' +  SkillResult[i]+ '\n';
 		}
 		
 		
+       let SKesult ='敵人的回合:\n'
+		for(var i = 0;i<times;i++){
+			SKesult = SKesult + AttackResult[i];
+		}
+		
+		
+		rply.text = SKesult;
+		
 		return rply;
+    
+		
+		
+		
+	}
+}
+	
 		
 		
 		
