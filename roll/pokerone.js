@@ -25,7 +25,7 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
     
     //確定遊戲階段
 		
-		if(pokercard == '單抽'){
+		if(pokercard == '單張'){
 			//設定基本變數
       
 			//出現卡片
