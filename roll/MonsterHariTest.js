@@ -63,7 +63,7 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
     
     }else if(monsterHP < 12){
 			//紅血區域
-			times = 2
+			times = 1
 	    
 			OneChance = 0;
 			TwoChance = 30;
