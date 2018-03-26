@@ -109,7 +109,7 @@ function parseInput(rplyToken, inputStr) {
 	if (trigger.match(/^星輝拉霸機$/) != null) return exports.GambleLaba.main(mainMsg[1]);
 
 	//賭博拉霸
-	if (trigger.match(/^撲克抽卡$/) != null) return exports.poker.main(mainMsg[1]);
+	if (trigger.match(/^撲克抽卡$/) != null) return exports.pokerone.main(mainMsg[1]);
 	
 	/*tarot 指令
 	if (trigger.match(/猜拳/) != null) {
