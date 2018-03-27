@@ -27,7 +27,7 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 			//設定基本變數
       
 			//出現卡片
-      times = 5;
+      times = 1;
       
 		rockChance = 33;//
     scissorsChance = 33;//
