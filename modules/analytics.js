@@ -111,8 +111,8 @@ function parseInput(rplyToken, inputStr) {
 	//賭博拉霸
 	if (trigger.match(/^撲克抽卡$/) != null) return exports.pokerone.main(mainMsg[1]);
 	
-	
-	
+	//RoadXX猜拳
+	if (trigger.match(/^猜拳$/) != null) return exports.roadXX.main(mainMsg[1]);
 	
 	
 	//////////////////////////怪物資料彙整區////////////////////////////////
