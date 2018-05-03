@@ -109,27 +109,27 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 			if(temp <=diamondChance+heartChance+spadeChance+clubsChance+JOKERChance && temp >heartChance+spadeChance+clubsChance+JOKERChance){
 				
 				cardResult[i] = Rulistdiamond[Math.floor((Math.random() * (Rulistdiamond.length)) + 0)];
-				GachaResult[i] = '\' +  cardResult[i]+ '\n';
+				GachaResult[i] = '\~' +  cardResult[i]+ '\n';
 				
 			}else if(temp <=heartChance+spadeChance+clubsChance+JOKERChance && temp > spadeChance+clubsChance+JOKERChance){
 				
 				cardResult[i] = Rulistheart[Math.floor((Math.random() * (Rulistheart.length)) + 0)];
-				GachaResult[i] = '\' +  cardResult[i]+ '\n';
+				GachaResult[i] = '\~' +  cardResult[i]+ '\n';
 				
 			}else if(temp <= spadeChance+clubsChance+JOKERChance && temp > clubsChance+JOKERChance){
 				
 				cardResult[i] = Rulistspade[Math.floor((Math.random() * (Rulistspade.length)) + 0)];
-				GachaResult[i] = '\' +  cardResult[i]+ '\n';
+				GachaResult[i] = '\~' +  cardResult[i]+ '\n';
 				
 			}else if(temp <= clubsChance+JOKERChance && temp >JOKERChance){
 				
 				cardResult[i] = Rulistclubs[Math.floor((Math.random() * (Rulistclubs.length)) + 0)];
-				GachaResult[i] = '\' +  cardResult[i]+ '\n';
+				GachaResult[i] = '\~' +  cardResult[i]+ '\n';
 				
 			}else if(temp <= JOKERChance){
 				
 				cardResult[i] = RulistJOKER[Math.floor((Math.random() * (RulistJOKER.length)) + 0)];
-				GachaResult[i] = '\' +  cardResult[i]+ '\n';
+				GachaResult[i] = '\~' +  cardResult[i]+ '\n';
 				
 			}
 		}//通常手卡處理	
