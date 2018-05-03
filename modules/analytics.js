@@ -113,6 +113,8 @@ function parseInput(rplyToken, inputStr) {
 	
 	if (trigger.match(/^記憶隙間模擬$/) != null) return exports.memory.main(mainMsg[1]);
 	
+	if (trigger.match(/^碎片開啟模擬$/) != null) return exports.memoryopen.main(mainMsg[1]);
+	
 	//比大小
 	if (trigger.match(/^撲克比大小$/) != null) return exports.pokertwo.main(mainMsg[1]);
 	
