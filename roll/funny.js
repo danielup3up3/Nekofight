@@ -55,6 +55,14 @@ return rply;
 }
 
 
+function cardlimit(){
+
+	rply.text = '抽你嗎抽，阿不是要屯歐泊?';
+
+	return rply;
+
+}
+
 
 function C8763(){
 
