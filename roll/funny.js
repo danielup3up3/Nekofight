@@ -57,7 +57,7 @@ return rply;
 
 function cardlimit(){
 
-	rply.text = '上周目的你:抽啊小，阿不是要屯歐泊?';
+	rply.text = '別抽了，不如來這邊靜靜(指向白平時窩的"那個地方"';
 
 	return rply;
 
