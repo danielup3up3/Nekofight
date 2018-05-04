@@ -404,6 +404,7 @@ module.exports = {
 	SortIt,
 	tarotRevReply,
 	choice,
+	cardlimit,
 	tarotCardReply,
 	C8763,
 	ya,
