@@ -87,7 +87,7 @@ function parseInput(rplyToken, inputStr) {
 	
 	//鴨霸獸指令開始於此
 	if (trigger.match(/霞|霞姊姊/) != null) return exports.funny.randomReply() ;
-	if (trigger.match(/抽卡|抽角/) != null) return exports.funny.cardlimit() ;
+	if (trigger.match(/抽抽|抽角/) != null) return exports.funny.cardlimit() ;
 	if (trigger.match(/C8763|星爆氣流斬/) != null) return exports.funny.C8763() ;
 	if (trigger.match(/^野$/) != null) return exports.funny.ya() ;
 	if (trigger.match(/^炸$/) != null) return exports.funny.zA() ;
