@@ -57,7 +57,7 @@ return rply;
 
 function cardlimit(){
 
-	rply.text = '抽你嗎抽，阿不是要屯歐泊?';
+	rply.text = '上周目的你:抽啊小，阿不是要屯歐泊?';
 
 	return rply;
 
