@@ -1,194 +1,249 @@
 var rollbase = require('./rollbase.js');
 var rply ={type : 'text'}; //type是必需的,但可以更改
 
-//////////////// 
-	function main(stype) {
-		
-		let AttackResult = [];//結果
-		let SkillResult = [];
-		var times = 0;//出貨量
-
+////////////////抽卡數
+	function main(pokercard) {
   
-    let SkillOne = [];//技能1
-		let SkillTwo = [];//技能2
-		let SpecialSkill = [];//特殊技能
+               //基本變數
+		let GachaResult = [];//結果
+		let cardResult = [];
+		var times = 0;//次數
+
+	//基本變數
+		let Rulistdiamond = [];  //方塊
+                let Rulistheart = [];  //紅心
+                let Rulistspade = [];  //黑桃
+                let Rulistclubs = [];  //梅花
+                let RulistJOKER = [];  //鬼牌
     
-    var OneChance = 0;//技能1機率
-		var TwoChance = 0;//技能2機率
-		var SpecialChance = 0;//特殊技能機率
+    var diamondChance = 0;//方塊獲得率
+    var heartChance = 0;//紅心獲得率
+    var spadeChance = 0;//黑桃獲得率
+    var clubsChance = 0;//梅花獲得率
+    var JOKERChance = 0;//鬼牌獲得率
     
-   
-    if(stype == 1){
-			//綠血區域時
-			times = 1
-	    
-			OneChance = 100;
-			TwoChance = 0;
-			SpecialChance = 0;
-		
-			//
-			
-			//設定綠血攻擊模式
-			SkillOne.length = 3;
-			SkillOne = ['強攻','特殊','守護'];
-			
-			SkillTwo.length = 4;
-			SkillTwo = ['【SR】無迷宮武=初始之弓','【SR】無迷宮武=回歸之槍','【SR】無迷宮武=虛無之杖','【SR】無宮武=斬夜之劍'];
-			
-			SpecialSkill.length = 4;
-			SpecialSkill = ['【SSR】無迷宮武=初始之弓','【SSR】無迷宮武=回歸之槍','【SSR】無迷宮武=虛無之杖','【SSR】無宮武=斬夜之劍'];
-			
-      
-      }else if(stype == 2){
-			//黃血區域
-		times = 2
-	      
-			OneChance = 100;
-			TwoChance = 0;
-			SpecialChance = 0;
-		
-			//
-			
-			//設定綠血攻擊模式
-			SkillOne.length = 3;
-			SkillOne = ['強攻','特殊','守護'];
-			
-			SkillTwo.length = 4;
-			SkillTwo = ['【SR】無迷宮武=初始之弓','【SR】無迷宮武=回歸之槍','【SR】無迷宮武=虛無之杖','【SR】無宮武=斬夜之劍'];
-			
-			SpecialSkill.length = 4;
-			SpecialSkill = ['【SSR】無迷宮武=初始之弓','【SSR】無迷宮武=回歸之槍','【SSR】無迷宮武=虛無之杖','【SSR】無宮武=斬夜之劍'];
-		
     
-    }else if(stype == 3){
-			//紅血區域
-			times = 3
-	    
-			OneChance = 100;
-			TwoChance = 0;
-			SpecialChance = 0;
+    //確定遊戲階段
 		
+		if(pokercard == 1){
+			//設定基本變數
+      
+			//出現卡片
+                        times = 1;
+      
+			diamondChance = 100;
+			heartChance = 0;
+			spadeChance = 0;
+			clubsChance = 0;
+			JOKERChance = 0;
 			//
 			
-			//設定綠血攻擊模式
-			SkillOne.length = 3;
-			SkillOne = ['強攻','特殊','守護'];
+			//設定獎勵內容
+			Rulistdiamond.length = 3;
+			Rulistdiamond = ['強攻','特殊','守護'];
 			
-			SkillTwo.length = 4;
-			SkillTwo = ['【SR】無迷宮武=初始之弓','【SR】無迷宮武=回歸之槍','【SR】無迷宮武=虛無之杖','【SR】無宮武=斬夜之劍'];
+			Rulistheart.length = 13;
+			Rulistheart = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
 			
-			SpecialSkill.length = 4;
-			SpecialSkill = ['【SSR】無迷宮武=初始之弓','【SSR】無迷宮武=回歸之槍','【SSR】無迷宮武=虛無之杖','【SSR】無宮武=斬夜之劍'];
+			Rulistspade.length = 13;
+			Rulistspade = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
       
-      }else if(stype == 4){
-			//紅血區域
-			times = 4
-	    
-			OneChance = 100;
-			TwoChance = 0;
-			SpecialChance = 0;
-		
+      Rulistclubs.length = 13;
+			Rulistclubs = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
+      
+      RulistJOKER.length = 1;
+			RulistJOKER = ['JOKER'];
+      
+      
+      
+     } else if(pokercard == 2){
+				times = 2;
+        
+                        diamondChance = 100;
+			heartChance = 0;
+			spadeChance = 0;
+			clubsChance = 0;
+			JOKERChance = 0;
 			//
 			
-			//設定綠血攻擊模式
-			SkillOne.length = 3;
-			SkillOne = ['強攻','特殊','守護'];
+			//設定獎勵內容
+			Rulistdiamond.length = 3;
+			Rulistdiamond = ['強攻','特殊','守護'];
 			
-			SkillTwo.length = 4;
-			SkillTwo = ['【SR】無迷宮武=初始之弓','【SR】無迷宮武=回歸之槍','【SR】無迷宮武=虛無之杖','【SR】無宮武=斬夜之劍'];
+			Rulistheart.length = 13;
+			Rulistheart = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
 			
-			SpecialSkill.length = 4;
-			SpecialSkill = ['【SSR】無迷宮武=初始之弓','【SSR】無迷宮武=回歸之槍','【SSR】無迷宮武=虛無之杖','【SSR】無宮武=斬夜之劍'];
+			Rulistspade.length = 13;
+			Rulistspade = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
       
-      }else if(stype == 5){
-			//紅血區域
-			times = 5
-	    
-			OneChance = 100;
-			TwoChance = 0;
-			SpecialChance = 0;
-		
+                        Rulistclubs.length = 13;
+			Rulistclubs = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
+      
+                        RulistJOKER.length = 1;
+			RulistJOKER = ['JOKER'];
+	     
+	      } else if(pokercard == 3){
+				times = 3;
+        
+                        diamondChance = 100;
+			heartChance = 0;
+			spadeChance = 0;
+			clubsChance = 0;
+			JOKERChance = 0;
 			//
 			
-			//設定綠血攻擊模式
-			SkillOne.length = 3;
-			SkillOne = ['強攻','特殊','守護'];
+			//設定獎勵內容
+			Rulistdiamond.length = 3;
+			Rulistdiamond = ['強攻','特殊','守護'];
 			
-			SkillTwo.length = 4;
-			SkillTwo = ['【SR】無迷宮武=初始之弓','【SR】無迷宮武=回歸之槍','【SR】無迷宮武=虛無之杖','【SR】無宮武=斬夜之劍'];
+			Rulistheart.length = 13;
+			Rulistheart = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
 			
-			SpecialSkill.length = 4;
-			SpecialSkill = ['【SSR】無迷宮武=初始之弓','【SSR】無迷宮武=回歸之槍','【SSR】無迷宮武=虛無之杖','【SSR】無宮武=斬夜之劍'];
+			Rulistspade.length = 13;
+			Rulistspade = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
       
-      }else if(stype == 6){
+                        Rulistclubs.length = 13;
+			Rulistclubs = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
+      
+                        RulistJOKER.length = 1;
+			RulistJOKER = ['JOKER'];
+		      
+		       } else if(pokercard == 4){
+				times = 4;
+        
+                        diamondChance = 100;
+			heartChance = 0;
+			spadeChance = 0;
+			clubsChance = 0;
+			JOKERChance = 0;
+			//
+			
+			//設定獎勵內容
+			Rulistdiamond.length = 3;
+			Rulistdiamond = ['強攻','特殊','守護'];
+			
+			Rulistheart.length = 13;
+			Rulistheart = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
+			
+			Rulistspade.length = 13;
+			Rulistspade = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
+      
+                        Rulistclubs.length = 13;
+			Rulistclubs = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
+      
+                        RulistJOKER.length = 1;
+			RulistJOKER = ['JOKER'];
+			       
+			        } else if(pokercard == 5){
+				times = 5;
+        
+                        diamondChance = 100;
+			heartChance = 0;
+			spadeChance = 0;
+			clubsChance = 0;
+			JOKERChance = 0;
+			//
+			
+			//設定獎勵內容
+			Rulistdiamond.length = 3;
+			Rulistdiamond = ['強攻','特殊','守護'];
+			
+			Rulistheart.length = 13;
+			Rulistheart = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
+			
+			Rulistspade.length = 13;
+			Rulistspade = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
+      
+                        Rulistclubs.length = 13;
+			Rulistclubs = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
+      
+                        RulistJOKER.length = 1;
+			RulistJOKER = ['JOKER'];
+      
+      }
+			
+     
+     
+      //設定說明文
+			else if(pokercard == null){
+				
 				//設定說明文內容
-				rply.text ='目前\
-				\n 還沒有此模式';
+				rply.text ='無法支援'+ pokercard + '的補充喔!\
+				\n 請選擇1.2.3.4.5';
 				//
 				
 				return rply;//中斷+回傳值用
-		}
-      else{
-				//設定說明文內容
-				rply.text ='錯誤002:輸入格式錯誤\
-				\n 請確認後重試一次，如果仍有問題請通報Bug給GM知道';
+			
+      
+      }else{//設定說明文內容
+				rply.text ='無法支援'+ pokercard + '的補充喔!\
+				\n 請選擇1.2.3.4.5';
 				//
 				
 				return rply;//中斷+回傳值用
-		}
 		
-		 var temp = 0;
-		AttackResult.length = times;
+			
+      
+     
+     
+      }
+     var temp = 0;
+		GachaResult.length = times;
 		
 		for(var i = 0; i< times;i++){
 			
-			AttackResult[i] = '\n';
+			GachaResult[i] = '\n';
 			
 		}
     
-    
-    
-    //分析行動
-               
     for(var i=0; i< times;i++){
-		temp = rollbase.Dice(100);
+			temp = rollbase.Dice(100);
 
-		if(temp > TwoChance + SpecialChance){
+			if(temp <=diamondChance+heartChance+spadeChance+clubsChance+JOKERChance && temp >heartChance+spadeChance+clubsChance+JOKERChance){
+				
+				cardResult[i] = Rulistdiamond[Math.floor((Math.random() * (Rulistdiamond.length)) + 0)];
+				GachaResult[i] = '\【技能珠】' +  cardResult[i]+ '\n';
+				
+			}else if(temp <=heartChance+spadeChance+clubsChance+JOKERChance && temp > spadeChance+clubsChance+JOKERChance){
+				
+				cardResult[i] = Rulistheart[Math.floor((Math.random() * (Rulistheart.length)) + 0)];
+				GachaResult[i] = '\紅心' +  cardResult[i]+ '\n';
+				
+			}else if(temp <= spadeChance+clubsChance+JOKERChance && temp > clubsChance+JOKERChance){
+				
+				cardResult[i] = Rulistspade[Math.floor((Math.random() * (Rulistspade.length)) + 0)];
+				GachaResult[i] = '\黑桃' +  cardResult[i]+ '\n';
+				
+			}else if(temp <= clubsChance+JOKERChance && temp >JOKERChance){
+				
+				cardResult[i] = Rulistclubs[Math.floor((Math.random() * (Rulistclubs.length)) + 0)];
+				GachaResult[i] = '\梅花' +  cardResult[i]+ '\n';
+				
+			}else if(temp <= JOKERChance){
+				
+				cardResult[i] = RulistJOKER[Math.floor((Math.random() * (RulistJOKER.length)) + 0)];
+				GachaResult[i] = '\鬼牌' +  cardResult[i]+ '\n';
+				
+			}
+		}//通常手卡處理	
     
-			SkillResult[i] = SkillOne[Math.floor((Math.random() * (SkillOne.length)) + 0)];
-				AttackResult[i] =  '\【技能珠】:' +  SkillResult[i]+ '\n';
-      
-		}else if(temp <=TwoChance + SpecialChance && temp >SpecialChance ){
-    
-			SkillResult[i] = SkillTwo[Math.floor((Math.random() * (SkillTwo.length)) + 0)];
-				AttackResult[i] =  '\【武器】:' +  SkillResult[i]+ '\n';
-        
-		}else if(temp <= SpecialChance){
-			
-			SkillResult[i] = SpecialSkill[Math.floor((Math.random() * (SpecialSkill.length)) + 0)];
-				AttackResult[i] =  '\【武器】:' +  SkillResult[i]+ '\n';
-		}
-		
-		
-       let SKesult ='結果:\n'
+    let GResult ='結果:\n'
 		for(var i = 0;i<times;i++){
-			SKesult = SKesult + AttackResult[i];
+			GResult = GResult + GachaResult[i];
 		}
 		
 		
-		rply.text = SKesult;
+		rply.text = GResult;
 		
 		return rply;
+		
+		
+		
+	}
+
     
-		
-		
-		
-	}
-	
-		
-		
-		
-	}
+    
+
 ////////////////
 
 module.exports = {
