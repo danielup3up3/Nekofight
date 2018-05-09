@@ -122,6 +122,8 @@ function parseInput(rplyToken, inputStr) {
 	//RoadXX猜拳
 	if (trigger.match(/^猜拳$/) != null) return exports.roadXX.main(mainMsg[1]);
 	
+	if (trigger.match(/^技能珠補充$/) != null) return exports.skillball.main(mainMsg[1]);
+	
 	
 	//////////////////////////怪物資料彙整區////////////////////////////////
 	
