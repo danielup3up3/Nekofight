@@ -68,16 +68,16 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 			
 			//設定獎勵內容
 			Rulistdiamond.length = 13;
-			Rulistdiamond = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
+			Rulistdiamond = ['7','2','3','4','5','6','7','8','9','10','J','Q','7'];
 			
 			Rulistheart.length = 13;
-			Rulistheart = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
+			Rulistheart = ['7','2','3','4','5','6','7','8','9','10','J','Q','7'];
 			
 			Rulistspade.length = 13;
-			Rulistspade = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
+			Rulistspade = ['7','2','3','4','5','6','7','8','9','10','J','Q','7'];
       
                         Rulistclubs.length = 13;
-			Rulistclubs = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
+			Rulistclubs = ['7','2','3','4','5','6','7','8','9','10','J','Q','7'];
       
                         RulistJOKER.length = 1;
 			RulistJOKER = ['JOKER'];
