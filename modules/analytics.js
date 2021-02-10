@@ -130,7 +130,7 @@ function parseInput(rplyToken, inputStr) {
 	//哈里
 	if (trigger.match(/^哈里挑戰1$/) != null) return exports.funny.Hari() ;
 	
-	if (trigger.match(/^武器鑑定$/) != null) return exports.strengthenG.main(mainMsg[1]);
+	if (trigger.match(/^武器附魔$/) != null) return exports.strengthenG.main(mainMsg[1]);
 	
 	
 	
