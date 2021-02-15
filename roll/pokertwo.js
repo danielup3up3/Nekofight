@@ -32,9 +32,9 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
                         times = 1;
       
 			diamondChance = 10;
-			heartChance = 30;
-			spadeChance = 20;
-			clubsChance = 20;
+			heartChance = 50;
+			spadeChance = 10;
+			clubsChance = 10;
 			JOKERChance = 20;
 			//
 			
@@ -60,10 +60,10 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 				times = 1;
       
 			diamondChance = 10;
-			heartChance = 20;
-			spadeChance = 25;
-			clubsChance = 25;
-			JOKERChance = 20;
+			heartChance = 50;
+			spadeChance = 15;
+			clubsChance = 15;
+			JOKERChance = 10;
 			//
 			
 			//設定獎勵內容
