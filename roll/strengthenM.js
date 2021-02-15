@@ -30,10 +30,10 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 			
 			//設定綠血攻擊模式
 			SkillOne.length = 4;
-			SkillOne = ['傷害基數+100','傷害基數+50','裝備者HP+200','裝備者HP+500'];
+			SkillOne = ['傷害基數+100','傷害基數+50','裝備者HP+200','裝備者HP+400'];
 			
 			SkillTwo.length = 4;
-			SkillTwo = ['傷害基數+300','傷害基數+500','裝備者HP+400','裝備者HP+1000'];
+			SkillTwo = ['傷害基數+300','傷害基數+500','裝備者HP+400','裝備者HP+8000'];
 			
 			SpecialSkill.length = 4;
 			SpecialSkill = ['傷害基數+2000','傷害基數+1000','裝備者HP+2000','裝備者HP+4000'];
@@ -53,10 +53,10 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 			SkillOne = ['傷害基數+100','傷害基數+50','裝備者HP+200','裝備者HP+500'];
 			
 			SkillTwo.length = 4;
-			SkillTwo = ['傷害基數+300','傷害基數+500','裝備者HP+400','裝備者HP+1000'];
+			SkillTwo = ['傷害基數+300','傷害基數+500','裝備者HP+400','裝備者HP+800'];
 			
 			SpecialSkill.length = 4;
-			SpecialSkill = ['傷害基數+2000','傷害基數+1000','裝備者HP+2000','裝備者HP+4000'];
+			SpecialSkill = ['傷害基數+500','傷害基數+1000','裝備者HP+1000','裝備者HP+1500'];
 		
     
     }else if(stype == '三突'){
@@ -73,10 +73,10 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 			SkillOne = ['傷害基數+100','傷害基數+50','裝備者HP+200','裝備者HP+500'];
 			
 			SkillTwo.length = 4;
-			SkillTwo = ['傷害基數+300','傷害基數+500','裝備者HP+400','裝備者HP+1000'];
+			SkillTwo = ['傷害基數+300','傷害基數+500','裝備者HP+400','裝備者HP+800'];
 			
 			SpecialSkill.length = 4;
-			SpecialSkill = ['傷害基數+2000','傷害基數+1000','裝備者HP+2000','裝備者HP+4000'];
+			SpecialSkill = ['傷害基數+500','傷害基數+1000','裝備者HP+1000','裝備者HP+1500'];
       
       }else if(stype == '四突'){
 				//設定說明文內容
@@ -128,7 +128,7 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 		}
 		
 		
-       let SKesult ='強化結果:\n'
+       let SKesult ='突破結果:\n'
 		for(var i = 0;i<times;i++){
 			SKesult = SKesult + AttackResult[i];
 		}
