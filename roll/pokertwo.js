@@ -25,7 +25,7 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
     
     //確定遊戲階段
 		
-		if(pokercard == '比大'){
+		if(pokercard == '比小'){
 			//設定基本變數
       
 			//出現卡片
@@ -56,7 +56,7 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
       
       
       
-     } else if(pokercard == '比小'){
+     } else if(pokercard == '比大'){
 				times = 1;
       
 			diamondChance = 10;
