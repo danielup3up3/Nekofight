@@ -132,6 +132,8 @@ function parseInput(rplyToken, inputStr) {
 	
 	if (trigger.match(/^武器附魔$/) != null) return exports.strengthenG.main(mainMsg[1]);
 	
+	if (trigger.match(/^武器突破$/) != null) return exports.strengthenM.main(mainMsg[1]);
+	
 	
 	
 	//////////////////////////怪物實戰設定區////////////////////////////////
