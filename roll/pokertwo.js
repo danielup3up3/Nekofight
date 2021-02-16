@@ -59,11 +59,11 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
      } else if(pokercard == '比大'){
 				times = 1;
       
-			diamondChance = 10;
-			heartChance = 40;
-			spadeChance = 35;
-			clubsChance = 15;
-			JOKERChance = 10;
+			diamondChance = 40;
+			heartChance = 20;
+			spadeChance = 15;
+			clubsChance = 10;
+			JOKERChance = 15;
 			//
 			
 			//設定獎勵內容
