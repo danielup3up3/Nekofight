@@ -18,7 +18,7 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 		var SpecialChance = 0;//特殊技能機率
     
    
-    if(stype == '一突'){
+    if(stype == '百里挑一'){
 			//綠血區域時
 			times = 1
 	    
@@ -39,7 +39,7 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 			SpecialSkill = ['傷害基數+2000','傷害基數+1000','裝備者HP+2000','裝備者HP+4000'];
 			
       
-      }else if(stype == '二突'){
+      }else if(stype == '千載難逢'){
 			//黃血區域
 		times = 1
 	      
@@ -59,7 +59,7 @@ var rply ={type : 'text'}; //type是必需的,但可以更改
 			SpecialSkill = ['傷害基數+500','傷害基數+800','裝備者HP+500','裝備者HP+1000'];
 		
     
-    }else if(stype == '三突'){
+    }else if(stype == '萬中選一'){
 			//紅血區域
 			times = 1
 	    
